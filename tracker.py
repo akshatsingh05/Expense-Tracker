@@ -154,8 +154,9 @@ def menu():
         elif choice == "5":
             monthly_summary()
         else:
-            print("❌ Invalid option. Try again.\n")
+            print("❌ Invalid option. Please try again.\n")
 
 
 if __name__ == "__main__":
     menu()
+
