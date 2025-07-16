@@ -66,7 +66,7 @@ def filter_by_category():
         print("\n⚠️ No data to filter.\n")
         return
 
-    filtered = [row for row in entries[1:] if row[2] == category_input]  # index 2 is 'category'
+    filtered = [row for row in entries[1:] if row[2] == category_input]
 
     if not filtered:
         print(f"\n❌ No entries found for category: {category_input}\n")
@@ -103,7 +103,7 @@ def monthly_summary():
 
     for row in entries[1:]:
         date, typ, category, amount, description = row
-        entry_month = date.split("-")[1]  # Extract month
+        entry_month = date.split("-")[1]
 
         if entry_month == month_input:
             matched_entries.append(row)
@@ -124,7 +124,6 @@ def monthly_summary():
         date, typ, cat, amt, desc = row
         print(f"{date:<12} {typ:<10} {cat:<15} {amt:<10} {desc}")
 
-    # 🔽 Monthly Totals and Summary
     print("-" * 65)
     print(f"\n💰 Total Income  : ₹ {income_total:.2f}")
     print(f"💸 Total Expense : ₹ {expense_total:.2f}")
